@@ -85,7 +85,7 @@ const app = {
             'content-type': 'application/json',
             'Authorization': `Bearer ${key}`
         }
-        const subscription = await this.fetch('/v1/dashboard/billing/subscription', null, key);
+        const subscription = await this.fetch('/getErrList?page=1&pageSize=10', null, key);
         if (!subscription || !subscription.plan) {
             if (!this.total) {
                 this.total = [];
